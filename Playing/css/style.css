@@ -1,0 +1,45 @@
+:root {
+  --bg: #4ABDCA;
+  --main: #FC4A1A;
+  --sec: #F7B733;
+  --grey: #DFDCE3;
+}
+
+
+html {
+  background-color: var(--bg);
+  color: aliceblue;
+  font-family: 'Gamja Flower', cursive;
+}
+
+/* Reset styles to avoid browser defaults */
+body {
+  margin: 0;
+}
+
+nav {
+  padding: 10px;
+  text-align: right;
+}
+
+.content {
+  min-height: calc(80vh);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+
+
+}
+
+section {
+  padding: 0px 20%;
+}
+
+footer {
+  background-color: var(--grey);
+  position: relative;
+  text-align: right;
+
+}
