@@ -1,15 +1,27 @@
 :root {
-  --bg: #4ABDCA;
+  --bg: #fff;
   --main: #FC4A1A;
   --link: #0b0b8f;
   --linkSec: rgba(247, 183, 51, 0.7);
   --sec: #F7B733;
   --grey: #DFDCE3;
+  --font: #333;
+}
+
+/* Colour fonts added */
+@font-face {
+  font-family: 'Gilbert';
+  src: url('fonts/Gilbert-Color Bold-Preview_1004.otf');
+}
+
+@font-face {
+  font-family: 'Bixa';
+  src: url('fonts/NTBixa-Color.otf');
 }
 
 html {
   background-color: var(--bg);
-  color: aliceblue;
+  color: var(--font);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -41,6 +53,11 @@ nav a:hover {
 
 h1 {
   text-align: center;
+  font-family: 'Gilbert';
+}
+
+h2 {
+  font-family: 'Bixa';
 }
 
 section {
@@ -72,11 +89,19 @@ footer {
 - change to column
 - change the position of hidden text above and below to left and right */
 
-/* @media all and (max-device-width : 680px) {
+@media only screen and (max-width : 680px) {
   .panels {
     flex-direction: column;
   }
-} */
+
+  .panel .open {
+    font-size: 12px;
+  }
+
+  .panel > * {
+    flex-direction: row;
+  }
+}
 
 .panels {
   min-height: 100vh;
@@ -149,8 +174,8 @@ font-size: 4em;
 }
 
 .panel.open {
-font-size: 30px;
-flex: 5;
+font-size: 20px;
+flex: 3;
 }
 
 .content {

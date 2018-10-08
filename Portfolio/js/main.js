@@ -68,3 +68,7 @@ getPanels = document.querySelectorAll('.panel');
         this.classList.toggle('open-active');
       }
     }
+
+    poke = ['john', 'fred', 'barry', 'dave'];
+
+    poke = ['john', 'fred', 'barry', 'dave'];
