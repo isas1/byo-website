@@ -1,0 +1,52 @@
+:root {
+  --bg: #4ABDCA;
+  --main: #FC4A1A;
+  --sec: #F7B733;
+  --grey: #DFDCE3;
+}
+
+html {
+  background-color: var(--bg);
+  color: aliceblue;
+  font-family: 'Gamja Flower', cursive;
+}
+
+/* Reset styles to avoid browser defaults */
+body {
+  margin: 0;
+}
+
+nav {
+  padding: 10px;
+  text-align: right;
+  display: inline;
+}
+
+.content {
+  min-height: calc(80vh);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  padding: 0px 20%;
+}
+
+img {
+  border: 1px solid var(--sec);
+  opacity: 0.2;
+  box-shadow: 5px 10px var(--sec);
+}
+
+img .active {
+  transition: 0.5ms;
+}
+
+footer {
+  background-color: var(--grey);
+  position: relative;
+  text-align: right;
+}
