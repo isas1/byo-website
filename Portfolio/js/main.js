@@ -1,4 +1,4 @@
-// Preventing to many request being made
+// UX - Preventing too many request being made
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
   return function() {
