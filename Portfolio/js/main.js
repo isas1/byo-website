@@ -1,3 +1,5 @@
+// ***** Img sliding ***** //
+
 // UX - Preventing too many request being made
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
@@ -36,3 +38,33 @@ function checkSlide() {
       }
   });
 }
+
+
+// ***** Img sliding ***** //
+
+getPanels = document.querySelectorAll('.panel');
+    // link = document.querySelector('.link');
+    // str = '<a href="http://samisaacs.website">Portfolio</a>';
+    
+    // function to toggle .open class - this.addclass(.panels)
+    function toggleOpen() {
+      this.classList.toggle('open');
+      // console.log(link);
+      // link.outerHTML=str;
+    }
+    
+    // add onclick listener to run toggle function
+    getPanels.forEach(panel => {
+      panel.addEventListener("click", toggleOpen);
+    });
+    getPanels.forEach(panel => {
+      panel.addEventListener("transitionend", toggleActive);
+    });
+
+    // write a function to toggle an active class
+    function toggleActive(e) {
+      //if transistion includes 'flex'
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
