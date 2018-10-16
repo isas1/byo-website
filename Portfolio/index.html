@@ -10,12 +10,18 @@
 </head>
 
 <body>
+  <header>
+      <h1>A story about getting lost.</h1>
+  </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="pages/about.html">About</a>
-    <a href="pages/contact.html">Contact</a>
-    <a href="pages/gallery.html">Gallery</a>
+      <ul>
+          <li class="logo"><a href="#"><img id="logo" width="40" height="40" src="media/cslogo.png" alt="CS Logo"></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+        </ul>
   </nav>
 
   <div class="content">
@@ -45,7 +51,7 @@
         has, justo tractatos omittantur mea at. Detracto accusata cotidieque eam an.
       </p>
       <p>Click the links in the navigation bar to find out more.</p>
-      <img src="media/sports.jpeg" alt="Is the link correct?">
+      <img class="pic" src="media/sports.jpeg" alt="Is the link correct?">
       <p>
         Lorem ipsum dolor sit amet, eu posse molestiae eum, sapientem eloquentiam at has. Vix ei integre philosophia,
         equidem inermis eum in, iusto aperiam luptatum eum ex. Duo ea porro omnium offendit, equidem nusquam prodesset
@@ -60,15 +66,28 @@
         sed. Volumus convenire an pro, ullum periculis ea per, pro errem eruditi eu. Te suscipit evertitur vituperata
         has, justo tractatos omittantur mea at. Detracto accusata cotidieque eam an.
       </p>
-
-
     </section>
   </div>
 
-  <!--Add a footer-->
   <footer>© Sam Isaacs</footer>
 
   <script src="./js/main.js"></script>
+  <script> // sticky nav
+    const nav = document.querySelector('nav');
+    let topOfNav = nav.offsetTop;
+
+    function fixNav() {
+      if (window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
+      }
+    }
+
+    window.addEventListener('scroll', fixNav);
+  </script>
 </body>
 
 </html>

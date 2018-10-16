@@ -30,21 +30,80 @@ body {
   margin: 0;
 }
 
+header {
+  text-align: center;
+  height:50vh;
+  background:url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+header > h1 {
+  color:white;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.2)
+}
+
+/** STICK NAV **/
 nav {
-  padding: 10px;
-  text-align: right;
-  display: inline;
+  background:black;
+  top:0;
+  width: 100%;
+  transition:all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+/* Added when scrollY >= nav.offsetTop */
+body.fixed-nav nav {
+  position: fixed;
+  box-shadow:0 5px 0 rgba(0,0,0,0.1);
+}
+
+nav ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+  display:flex;
+}
+
+nav li {
+  flex:1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li.logo {
+  max-width:0;
+  overflow: hidden;
+  background: white;
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+li.logo a {
+  color:black;
+}
+
+.fixed-nav li.logo {
+  max-width:500px;
 }
 
 nav a {
-  color: var(--link);
-  transition: all .3s;
+  text-decoration: none;
+  padding:20px;
+  display: inline-block;
+  color:white;
+  transition:all 0.2s;
+  text-transform: uppercase;
 }
 
-nav a:hover {
-  /* replace with text-shadow here */
-  text-shadow: 2px 2px 5px var(--linkSec);
-}
+/** CONTENT **/
 
 .content {
   min-height: calc(80vh);
@@ -62,6 +121,13 @@ h2 {
 
 section {
   padding: 0px 10%;
+}
+img#logo {
+  opacity: 1;
+  border: none;
+  box-shadow: none;
+  max-width: 30;
+  max-height: 30;
 }
 
 img {
