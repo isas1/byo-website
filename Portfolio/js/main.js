@@ -16,7 +16,7 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
-const imgs = document.querySelectorAll('img');
+const imgs = document.querySelectorAll('.pic');
 
 window.addEventListener("scroll", debounce(checkSlide));
 
@@ -68,7 +68,3 @@ getPanels = document.querySelectorAll('.panel');
         this.classList.toggle('open-active');
       }
     }
-
-    poke = ['john', 'fred', 'barry', 'dave'];
-
-    poke = ['john', 'fred', 'barry', 'dave'];
