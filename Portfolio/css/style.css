@@ -77,6 +77,10 @@ nav li {
   align-items: center;
 }
 
+nav li a:hover {
+  font-size: 1.2em
+}
+
 li.logo {
   max-width:0;
   overflow: hidden;
@@ -99,7 +103,7 @@ nav a {
   padding:20px;
   display: inline-block;
   color:white;
-  transition:all 0.2s;
+  transition: all 0.2s;
   text-transform: uppercase;
 }
 
@@ -126,8 +130,14 @@ img#logo {
   opacity: 1;
   border: none;
   box-shadow: none;
-  max-width: 30;
-  max-height: 30;
+  transform:translateX(0%) scale(1);
+  width: 2em;
+  height: 2em;
+}
+
+img#logo:hover {
+  width: 2.1em;
+  height: 2.1em;
 }
 
 img {

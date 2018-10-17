@@ -26,10 +26,15 @@ function checkSlide() {
   
   // find the middle of img
   const slideIn = (window.scrollY + window.innerHeight) - img.height / 2 // start of transition
-
+  console.log(`Y: ${window.scrollY}`)
+  console.log(`InnerHeight: ${window.innerHeight}`)
   const imgBottom = img.offsetTop + img.height; // bottom of the image is the end of the transition
+  console.log(`imgBottom: ${imgBottom}`);
+  console.log(`img.offsetTop: ${img.offsetTop}`);
   const isHalfShown = slideIn > img.offsetTop; // between middle of image and bottom - to add "active" class
+  console.log(`isHalfShown: ${isHalfShown}`);
   const isNotPast = imgBottom > window.scrollY; // above bottom of image - to add "active" class
+  console.log(`isNotPast: ${isNotPast}`);
 
   if (isHalfShown && isNotPast) { // add 'active' class when slidIn
         img.classList.add("active");
