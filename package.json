@@ -1,0 +1,19 @@
+{
+  "name": "byowebsite",
+  "version": "1.0.0",
+  "description": "Simple website building -->",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isas1/BYOWebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isas1/BYOWebsite/issues"
+  },
+  "homepage": "https://github.com/isas1/BYOWebsite#readme"
+}
