@@ -107,6 +107,20 @@ nav a {
   text-transform: uppercase;
 }
 
+/* class added  */
+.highlight {
+  transition: all 0.3s;
+  border-bottom:2px solid rgba(0,0,0,0.1);
+  position: absolute;
+  top:0;
+  background:rgba(255,255,255,0.2);
+  left:0;
+  z-index: 1;
+  border-radius:20px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 /** CONTENT **/
 
 .content {
@@ -142,10 +156,10 @@ img#logo:hover {
 
 img {
   border: 1px solid var(--sec);
-  opacity:0;
+  opacity:1;
   transition:all .5s;
   box-shadow: 5px 10px var(--sec);
-  transform:translateX(-30%) scale(0.95);
+  /* transform:translateX(-30%) scale(0.95); add back if adding sliding transition */
 }
 
 img.active {
