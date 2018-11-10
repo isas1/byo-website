@@ -112,12 +112,12 @@ function highlightLink() {
   highlight.style.width = `${coords.width}px`;
   highlight.style.height = `${coords.height}px`;
   highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`
-  console.log(linkCoords);
+  // console.log(linkCoords);
 }
 
 function removeHighlight() {
   highlight.classList.remove('highlight');
-  console.log("Remove highlight here");
+  // console.log("Remove highlight here");
 }
 
 triggers.forEach(a => a.addEventListener("mouseenter", highlightLink));
